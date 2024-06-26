@@ -1,6 +1,6 @@
 //
 //  NavigationBar.swift
-//  UEFAGrpStage
+//  EURO
 //
 //  Created by Shounak Jindam on 26/06/24.
 //
