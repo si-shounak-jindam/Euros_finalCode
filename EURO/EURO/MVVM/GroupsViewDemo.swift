@@ -80,7 +80,7 @@ struct GroupHeaderDemo: View {
                                                groupKey: groupKey)
                             self.isEnabled[i].toggle()
                             withAnimation {
-                                viewModel.progressViewCounter += 1/35
+                                viewModel.progressViewCounter += 1/43
                             }
                         }) {
                             if isEnabled[i]{
@@ -253,10 +253,10 @@ struct GroupFooterDemo: View {
                             scoreSheetViewModel.showScoreSheet.toggle()
                         }, label: {
                             Text("See how to score points")
-                                .foregroundColor(.white
-                                )
+                                .foregroundColor(.cfsdkAccent1)
                         })
-                        .padding()
+                        .padding(.bottom, 30)
+                        .padding(.leading, 20)
                         Spacer()
                     }
                     .sheet(isPresented: $scoreSheetViewModel.showScoreSheet, content: {
@@ -266,7 +266,9 @@ struct GroupFooterDemo: View {
                 }
             }
             .background(FANTASYTheme.getColor(named: .groupSheetBlue))
+            .CFSDKcornerRadius(20, corners: [.topLeft, .topRight])
         }
+        
         .edgesIgnoringSafeArea(.bottom)
     }
 }
@@ -323,9 +325,8 @@ struct PredictorListUI: View {
                         Toggle(isOn: $viewModel.predictorNew[i].isChecked) {
                         }
                         .onChange(of: viewModel.predictorNew[i].isChecked) { newValue in
-                            // Your action here
                             withAnimation {
-                                viewModel.progressViewCounter += 1/35
+                                viewModel.progressViewCounter += 1/43
                             }
                         }
                         .overlay(
@@ -405,6 +406,7 @@ struct PredictorListUI: View {
                 Spacer()
             }
             .background(FANTASYTheme.getColor(named: .groupSheetBlue))
+            .CFSDKcornerRadius(20, corners: [.topLeft, .topRight])
         }
         .fullScreenCover(isPresented: $viewModel.showKnockoutBracket, content: {
             KnockoutPOC(viewModel: viewModel)

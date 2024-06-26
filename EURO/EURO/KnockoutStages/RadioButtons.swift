@@ -41,10 +41,8 @@ struct RadioButton: View {
     private func toggleSelection() {
         if selectedOption == teamName {
             selectedOption = ""
-            viewModel.progressViewCounter -= 1/35
         } else {
             selectedOption = teamName
-            viewModel.progressViewCounter += 1/35 
         }
     }
 }

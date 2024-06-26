@@ -217,10 +217,10 @@ struct KnockoutPOC: View {
             
             let totalSelectedTeams = selectedTeams.flatMap{ $0 }.map{ !$0.value.isEmpty }.filter{ $0 }.count
             if totalSelectedTeams > previouslySelectedTeamsCount {
-                viewModel.progressViewCounter += 1/35
+                viewModel.progressViewCounter += 1/43
             } else {
                 if totalSelectedTeams == previouslySelectedTeamsCount { } else {
-                    viewModel.progressViewCounter -= 1/35
+                    viewModel.progressViewCounter -= 1/43
                 }
             }
             previouslySelectedTeamsCount = totalSelectedTeams
