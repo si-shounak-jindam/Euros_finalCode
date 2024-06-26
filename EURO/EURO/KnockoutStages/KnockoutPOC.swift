@@ -28,7 +28,7 @@ struct MatchColumnView: View {
                         
                         FANTASYTheme.getImage(named: .Trophy)?
                             .resizable()
-                            .frame(width: 150, height: 200)
+                            .frame(width: 150, height: 220)
                     }
                     .padding(10)
                     .padding(.top, -170)
