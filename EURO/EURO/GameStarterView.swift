@@ -29,7 +29,8 @@ struct GameStarterView: View {
             }
         }
         .fullScreenCover(isPresented: $showGroupSelector, content: {
-            GroupStages()
+            GroupsViewDemo(viewModel: GroupsViewModel(),
+                           ScoreSheetViewModel: ScoreSheetViewModel())
         })
     }
 }
