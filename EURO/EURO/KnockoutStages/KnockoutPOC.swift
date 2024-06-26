@@ -23,12 +23,12 @@ struct MatchColumnView: View {
                     HStack {
                         Image(winnerLogo)
                             .resizable()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 50, height: 50)
                             .clipShape(Circle())
                         
                         FANTASYTheme.getImage(named: .Trophy)?
                             .resizable()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 150, height: 200)
                     }
                     .padding(10)
                     .padding(.top, -170)
