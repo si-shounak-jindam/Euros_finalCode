@@ -133,6 +133,10 @@ class GroupsViewModel: ObservableObject{
             Predictor(name: "F", teamName: "", flag: "", isChecked: false)
         ]
     }
+    
+    var selectedThirdPlacedTeams: [Predictor] {
+        return predictorNew.filter { $0.isChecked }
+    }
 
     //MARK: - Functions
     func indexMovedTeam(){

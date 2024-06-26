@@ -93,6 +93,7 @@ struct KnockoutPOC: View {
     @State private var winnerLogo: String = ""
     @State private var previouslySelectedTeamsCount: Int = .zero
     let tournamentStages: [String] = ["Round of 16", "Round of 8", "Semi Final", "Final"]
+   
     
     func spacing(elements: Int) -> CGFloat {
         (ColumnSpacing(rawValue: elements)?.spacing ?? ColumnSpacing.defaultSpace.spacing) - (CGFloat(additionalSpacing/elements))
@@ -232,39 +233,46 @@ struct KnockoutPOC: View {
     
     
     private func populateFirstRound() {
+        let selectedTeams = viewModel.predictorNew.filter { $0.isChecked }
+        guard selectedTeams.count == 4 else {
+            print("There must be exactly 4 selected teams")
+            return
+        }
+
+        let selectedThirdPlacedTeams = viewModel.selectedThirdPlacedTeams
         rounds[0] = [
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[0].teamName, 
+            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[0].teamName,
                                 teamFlag: viewModel.firstPlaceTeams[0].flag),
                     team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[5].teamName,
                                 teamFlag: viewModel.secondPlaceTeams[5].flag)),
             Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[1].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[1].teamName),
+                                teamFlag: viewModel.firstPlaceTeams[1].flag),
                     team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[4].teamName,
                                 teamFlag: viewModel.secondPlaceTeams[4].flag)),
             Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[2].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[2].teamName),
+                                teamFlag: viewModel.firstPlaceTeams[2].flag),
                     team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[3].teamName,
                                 teamFlag: viewModel.secondPlaceTeams[3].flag)),
             Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[3].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[3].teamName),
-                    team2:Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[2].teamName,
-                               teamFlag: viewModel.secondPlaceTeams[2].flag)),
+                                teamFlag: viewModel.firstPlaceTeams[3].flag),
+                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[2].teamName,
+                                teamFlag: viewModel.secondPlaceTeams[2].flag)),
             Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[4].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[4].teamName),
+                                teamFlag: viewModel.firstPlaceTeams[4].flag),
                     team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[1].teamName,
                                 teamFlag: viewModel.secondPlaceTeams[1].flag)),
             Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[5].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[5].teamName),
+                                teamFlag: viewModel.firstPlaceTeams[5].flag),
                     team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[0].teamName,
                                 teamFlag: viewModel.secondPlaceTeams[0].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.predictorNew[0].teamName,
-                                teamFlag: viewModel.predictorNew[0].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.predictorNew[1].teamName,
-                                teamFlag: viewModel.predictorNew[1].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.predictorNew[2].teamName,
-                                teamFlag: viewModel.predictorNew[2].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.predictorNew[3].teamName,
-                                teamFlag: viewModel.predictorNew[3].flag)),
+            Matches(team1: Team(teamName: "", fullTeamName: selectedTeams[0].teamName,
+                                teamFlag: selectedTeams[0].flag),
+                    team2: Team(teamName: "", fullTeamName: selectedTeams[1].teamName,
+                                teamFlag: selectedTeams[1].flag)),
+            Matches(team1: Team(teamName: "", fullTeamName: selectedTeams[2].teamName,
+                                teamFlag: selectedTeams[2].flag),
+                    team2: Team(teamName: "", fullTeamName: selectedTeams[3].teamName,
+                                teamFlag: selectedTeams[3].flag))
         ]
     }
     
