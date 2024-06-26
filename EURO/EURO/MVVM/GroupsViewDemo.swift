@@ -208,10 +208,12 @@ struct GroupFooterDemo: View {
     //bottomSheet
     var bottomSheet: some View {
         VStack(spacing: 0) {
+            let groupKey = viewModel.groupTeamsDictNew[index].name
+            let teams = viewModel.groupTeamsDictNew[index].teams
             Spacer()
             VStack {
                 HStack {
-                    Text("Most popular Group prediction")
+                    Text("Most popular Group \(groupKey) prediction")
                         .font(.subheadline)
                         .foregroundColor(.white)
                         .padding([.top, .leading], 10)
@@ -268,7 +270,6 @@ struct GroupFooterDemo: View {
             .background(FANTASYTheme.getColor(named: .groupSheetBlue))
             .CFSDKcornerRadius(20, corners: [.topLeft, .topRight])
         }
-        
         .edgesIgnoringSafeArea(.bottom)
     }
 }
