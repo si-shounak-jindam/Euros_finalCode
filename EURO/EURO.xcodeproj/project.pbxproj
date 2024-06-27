@@ -39,6 +39,12 @@
 		921EAF292C2C8AFE0032BA45 /* URLRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF152C2C8AFE0032BA45 /* URLRequest+Ext.swift */; };
 		921EAF2A2C2C8AFE0032BA45 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF162C2C8AFE0032BA45 /* View+Extension.swift */; };
 		921EAF2E2C2C8E5C0032BA45 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF2D2C2C8E5B0032BA45 /* NavigationBar.swift */; };
+		921EAF312C2D51F30032BA45 /* GroupsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF302C2D51F30032BA45 /* GroupsHeaderView.swift */; };
+		921EAF332C2D52A10032BA45 /* GroupsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF322C2D52A10032BA45 /* GroupsListView.swift */; };
+		921EAF352C2D532A0032BA45 /* GroupsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF342C2D532A0032BA45 /* GroupsFooterView.swift */; };
+		921EAF372C2D53D60032BA45 /* ThirdPlaceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF362C2D53D60032BA45 /* ThirdPlaceHeaderView.swift */; };
+		921EAF392C2D54190032BA45 /* ThirdPlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF382C2D54190032BA45 /* ThirdPlaceListView.swift */; };
+		921EAF3B2C2D547E0032BA45 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF3A2C2D547E0032BA45 /* CheckboxToggleStyle.swift */; };
 		92A99F7B2C0DD2A4005CA5C2 /* EUROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A99F7A2C0DD2A4005CA5C2 /* EUROApp.swift */; };
 		92A99F7D2C0DD2A4005CA5C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A99F7C2C0DD2A4005CA5C2 /* ContentView.swift */; };
 		92A99F7F2C0DD2A5005CA5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A99F7E2C0DD2A5005CA5C2 /* Assets.xcassets */; };
@@ -100,6 +106,12 @@
 		921EAF152C2C8AFE0032BA45 /* URLRequest+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ext.swift"; sourceTree = "<group>"; };
 		921EAF162C2C8AFE0032BA45 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		921EAF2D2C2C8E5B0032BA45 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		921EAF302C2D51F30032BA45 /* GroupsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsHeaderView.swift; sourceTree = "<group>"; };
+		921EAF322C2D52A10032BA45 /* GroupsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsListView.swift; sourceTree = "<group>"; };
+		921EAF342C2D532A0032BA45 /* GroupsFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFooterView.swift; sourceTree = "<group>"; };
+		921EAF362C2D53D60032BA45 /* ThirdPlaceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPlaceHeaderView.swift; sourceTree = "<group>"; };
+		921EAF382C2D54190032BA45 /* ThirdPlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPlaceListView.swift; sourceTree = "<group>"; };
+		921EAF3A2C2D547E0032BA45 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		92A99F772C0DD2A4005CA5C2 /* EURO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EURO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A99F7A2C0DD2A4005CA5C2 /* EUROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUROApp.swift; sourceTree = "<group>"; };
 		92A99F7C2C0DD2A4005CA5C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,8 +168,14 @@
 			isa = PBXGroup;
 			children = (
 				921EAEF82C2C6FF00032BA45 /* GroupsModel.swift */,
-				921EAEFA2C2C6FF00032BA45 /* GroupsViewDemo.swift */,
 				921EAEF72C2C6FF00032BA45 /* GroupsViewModel.swift */,
+				921EAEFA2C2C6FF00032BA45 /* GroupsViewDemo.swift */,
+				921EAF302C2D51F30032BA45 /* GroupsHeaderView.swift */,
+				921EAF322C2D52A10032BA45 /* GroupsListView.swift */,
+				921EAF342C2D532A0032BA45 /* GroupsFooterView.swift */,
+				921EAF362C2D53D60032BA45 /* ThirdPlaceHeaderView.swift */,
+				921EAF382C2D54190032BA45 /* ThirdPlaceListView.swift */,
+				921EAF3A2C2D547E0032BA45 /* CheckboxToggleStyle.swift */,
 			);
 			path = GroupStagesView;
 			sourceTree = "<group>";
@@ -432,8 +450,11 @@
 				92A99FBD2C0EFD03005CA5C2 /* GameStarterView.swift in Sources */,
 				921EAF252C2C8AFE0032BA45 /* CFSDKString+Ext.swift in Sources */,
 				921EAF2A2C2C8AFE0032BA45 /* View+Extension.swift in Sources */,
+				921EAF372C2D53D60032BA45 /* ThirdPlaceHeaderView.swift in Sources */,
+				921EAF332C2D52A10032BA45 /* GroupsListView.swift in Sources */,
 				921EAF1A2C2C8AFE0032BA45 /* CachedImageView.swift in Sources */,
 				921EAF282C2C8AFE0032BA45 /* Task+Ext.swift in Sources */,
+				921EAF3B2C2D547E0032BA45 /* CheckboxToggleStyle.swift in Sources */,
 				921EAEF12C2C6FED0032BA45 /* MatchView.swift in Sources */,
 				921EAEED2C2C6FED0032BA45 /* KnockoutPOC+Ext.swift in Sources */,
 				921EAEFD2C2C6FF00032BA45 /* GroupsModel.swift in Sources */,
@@ -443,15 +464,18 @@
 				921EAF192C2C8AFE0032BA45 /* RoundedCorner.swift in Sources */,
 				921EAF1B2C2C8AFE0032BA45 /* CFSDKColorName.swift in Sources */,
 				921EAF2E2C2C8E5C0032BA45 /* NavigationBar.swift in Sources */,
+				921EAF392C2D54190032BA45 /* ThirdPlaceListView.swift in Sources */,
 				921EAF222C2C8AFE0032BA45 /* ScoreSheetModel.swift in Sources */,
 				921EAF1E2C2C8AFE0032BA45 /* ClearModalModifier.swift in Sources */,
 				921EAEFB2C2C6FF00032BA45 /* GroupsViewDemo.swift in Sources */,
 				92A99F7D2C0DD2A4005CA5C2 /* ContentView.swift in Sources */,
 				921EAF202C2C8AFE0032BA45 /* RoundedButton.swift in Sources */,
 				92A99F7B2C0DD2A4005CA5C2 /* EUROApp.swift in Sources */,
+				921EAF352C2D532A0032BA45 /* GroupsFooterView.swift in Sources */,
 				921EAF242C2C8AFE0032BA45 /* CFSDKDouble+Ext.swift in Sources */,
 				921EAF1F2C2C8AFE0032BA45 /* FantasyTheme.swift in Sources */,
 				921EAF232C2C8AFE0032BA45 /* ScoreSheetViewModel.swift in Sources */,
+				921EAF312C2D51F30032BA45 /* GroupsHeaderView.swift in Sources */,
 				921EAEFE2C2C6FF00032BA45 /* GroupsViewModel.swift in Sources */,
 				921EAF212C2C8AFE0032BA45 /* ScorePointSheet.swift in Sources */,
 			);

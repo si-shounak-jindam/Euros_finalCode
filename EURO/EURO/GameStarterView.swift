@@ -29,7 +29,7 @@ struct GameStarterView: View {
             }
         }
         .fullScreenCover(isPresented: $showGroupSelector, content: {
-            GroupsViewDemo(viewModel: GroupsViewModel(),
+            GroupsMainView(viewModel: GroupsViewModel(),
                            ScoreSheetViewModel: ScoreSheetViewModel())
         })
     }
