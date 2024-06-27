@@ -202,8 +202,7 @@
 				921EAF0A2C2C8AFE0032BA45 /* RoundedButton.swift */,
 				921EAD502C2C54520032BA45 /* ColorExt.swift */,
 			);
-			name = Helper;
-			path = EURO/Helper;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		921EAF0F2C2C8AFE0032BA45 /* ScoreSheet */ = {
@@ -213,8 +212,7 @@
 				921EAF0D2C2C8AFE0032BA45 /* ScoreSheetModel.swift */,
 				921EAF0E2C2C8AFE0032BA45 /* ScoreSheetViewModel.swift */,
 			);
-			name = ScoreSheet;
-			path = EURO/ScoreSheet;
+			path = ScoreSheet;
 			sourceTree = "<group>";
 		};
 		921EAF172C2C8AFE0032BA45 /* Extensions */ = {
@@ -228,8 +226,7 @@
 				921EAF152C2C8AFE0032BA45 /* URLRequest+Ext.swift */,
 				921EAF162C2C8AFE0032BA45 /* View+Extension.swift */,
 			);
-			name = Extensions;
-			path = EURO/Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		921EAF2F2C2D51440032BA45 /* CommonViews */ = {
@@ -245,9 +242,6 @@
 		92A99F6E2C0DD2A4005CA5C2 = {
 			isa = PBXGroup;
 			children = (
-				921EAF172C2C8AFE0032BA45 /* Extensions */,
-				921EAF0B2C2C8AFE0032BA45 /* Helper */,
-				921EAF0F2C2C8AFE0032BA45 /* ScoreSheet */,
 				92A99F792C0DD2A4005CA5C2 /* EURO */,
 				92A99F8A2C0DD2A6005CA5C2 /* EUROTests */,
 				92A99F942C0DD2A6005CA5C2 /* EUROUITests */,
@@ -276,6 +270,9 @@
 				921EAEF62C2C6FF00032BA45 /* GroupStagesView */,
 				921EAF2F2C2D51440032BA45 /* CommonViews */,
 				921EAEDD2C2C6FEC0032BA45 /* KnockoutStages */,
+				921EAF0F2C2C8AFE0032BA45 /* ScoreSheet */,
+				921EAF0B2C2C8AFE0032BA45 /* Helper */,
+				921EAF172C2C8AFE0032BA45 /* Extensions */,
 				92A99F802C0DD2A5005CA5C2 /* Preview Content */,
 			);
 			path = EURO;
