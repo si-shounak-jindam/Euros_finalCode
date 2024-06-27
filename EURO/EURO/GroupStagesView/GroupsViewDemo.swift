@@ -196,7 +196,8 @@ struct GroupFooterDemo: View {
         }
         .padding()
         .background(Color(hex: 0x112f81))
-        .fullScreenCover(isPresented: $viewModel.showBottomSheet, content: {
+        .fullScreenCover(isPresented: $viewModel.showBottomSheet, 
+                         content: {
             bottomSheet
                 .clearModalBackground()
         })

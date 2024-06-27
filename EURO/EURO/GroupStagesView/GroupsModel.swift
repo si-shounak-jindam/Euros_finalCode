@@ -19,7 +19,7 @@ struct Team: Hashable {
     var teamFlag : String
 }
 
-struct Predictor {
+struct Predictor : Equatable{
     var name : String
     var teamName : String
     var flag : String

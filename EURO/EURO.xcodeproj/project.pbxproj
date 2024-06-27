@@ -145,8 +145,6 @@
 				921EAEDE2C2C6FEC0032BA45 /* KnockoutModel.swift */,
 				921EAEE02C2C6FEC0032BA45 /* KnockoutPOC.swift */,
 				921EAEE22C2C6FEC0032BA45 /* KnockoutPOC+Ext.swift */,
-				921EAF2D2C2C8E5B0032BA45 /* NavigationBar.swift */,
-				921EAEE72C2C6FED0032BA45 /* ProgressBar.swift */,
 				921EAEE62C2C6FEC0032BA45 /* MatchView.swift */,
 				921EAEE12C2C6FEC0032BA45 /* RadioButtons.swift */,
 				921EAEE52C2C6FEC0032BA45 /* ScrollOffsetPreferenceKey.swift */,
@@ -154,15 +152,14 @@
 			path = KnockoutStages;
 			sourceTree = "<group>";
 		};
-		921EAEF62C2C6FF00032BA45 /* MVVM */ = {
+		921EAEF62C2C6FF00032BA45 /* GroupStagesView */ = {
 			isa = PBXGroup;
 			children = (
 				921EAEF82C2C6FF00032BA45 /* GroupsModel.swift */,
 				921EAEFA2C2C6FF00032BA45 /* GroupsViewDemo.swift */,
 				921EAEF72C2C6FF00032BA45 /* GroupsViewModel.swift */,
-				921EAEF92C2C6FF00032BA45 /* SponsorView.swift */,
 			);
-			path = MVVM;
+			path = GroupStagesView;
 			sourceTree = "<group>";
 		};
 		921EAF032C2C8AFE0032BA45 /* Shapes */ = {
@@ -216,6 +213,16 @@
 			path = EURO/Extensions;
 			sourceTree = "<group>";
 		};
+		921EAF2F2C2D51440032BA45 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				921EAEF92C2C6FF00032BA45 /* SponsorView.swift */,
+				921EAF2D2C2C8E5B0032BA45 /* NavigationBar.swift */,
+				921EAEE72C2C6FED0032BA45 /* ProgressBar.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 		92A99F6E2C0DD2A4005CA5C2 = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +255,8 @@
 				92A99FA42C0DD426005CA5C2 /* Colours.xcassets */,
 				92A99FBC2C0EFD03005CA5C2 /* GameStarterView.swift */,
 				921EAD502C2C54520032BA45 /* ColorExt.swift */,
-				921EAEF62C2C6FF00032BA45 /* MVVM */,
+				921EAEF62C2C6FF00032BA45 /* GroupStagesView */,
+				921EAF2F2C2D51440032BA45 /* CommonViews */,
 				921EAEDD2C2C6FEC0032BA45 /* KnockoutStages */,
 				92A99F802C0DD2A5005CA5C2 /* Preview Content */,
 			);
