@@ -13,11 +13,6 @@ struct Matches: Hashable {
     var team2: Team?
 }
 
-//struct Team: Hashable {
-//    var name: String
-//    var teamFlag: String
-//}
-
 struct MatchSet {
     let set: [Matches]
 }

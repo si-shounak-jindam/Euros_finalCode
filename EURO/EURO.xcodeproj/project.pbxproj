@@ -15,7 +15,7 @@
 		921EAEF12C2C6FED0032BA45 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEE62C2C6FEC0032BA45 /* MatchView.swift */; };
 		921EAEF22C2C6FED0032BA45 /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEE12C2C6FEC0032BA45 /* RadioButtons.swift */; };
 		921EAEF52C2C6FED0032BA45 /* KnockoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEDE2C2C6FEC0032BA45 /* KnockoutModel.swift */; };
-		921EAEFB2C2C6FF00032BA45 /* GroupsViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEFA2C2C6FF00032BA45 /* GroupsViewDemo.swift */; };
+		921EAEFB2C2C6FF00032BA45 /* GroupsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEFA2C2C6FF00032BA45 /* GroupsMainView.swift */; };
 		921EAEFC2C2C6FF00032BA45 /* SponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEF92C2C6FF00032BA45 /* SponsorView.swift */; };
 		921EAEFD2C2C6FF00032BA45 /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEF82C2C6FF00032BA45 /* GroupsModel.swift */; };
 		921EAEFE2C2C6FF00032BA45 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAEF72C2C6FF00032BA45 /* GroupsViewModel.swift */; };
@@ -45,6 +45,7 @@
 		921EAF372C2D53D60032BA45 /* ThirdPlaceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF362C2D53D60032BA45 /* ThirdPlaceHeaderView.swift */; };
 		921EAF392C2D54190032BA45 /* ThirdPlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF382C2D54190032BA45 /* ThirdPlaceListView.swift */; };
 		921EAF3B2C2D547E0032BA45 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF3A2C2D547E0032BA45 /* CheckboxToggleStyle.swift */; };
+		921EAF3F2C2D58EB0032BA45 /* KnockoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EAF3E2C2D58EB0032BA45 /* KnockoutViewModel.swift */; };
 		92A99F7B2C0DD2A4005CA5C2 /* EUROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A99F7A2C0DD2A4005CA5C2 /* EUROApp.swift */; };
 		92A99F7D2C0DD2A4005CA5C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A99F7C2C0DD2A4005CA5C2 /* ContentView.swift */; };
 		92A99F7F2C0DD2A5005CA5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A99F7E2C0DD2A5005CA5C2 /* Assets.xcassets */; };
@@ -85,7 +86,7 @@
 		921EAEF72C2C6FF00032BA45 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 		921EAEF82C2C6FF00032BA45 /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
 		921EAEF92C2C6FF00032BA45 /* SponsorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorView.swift; sourceTree = "<group>"; };
-		921EAEFA2C2C6FF00032BA45 /* GroupsViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewDemo.swift; sourceTree = "<group>"; };
+		921EAEFA2C2C6FF00032BA45 /* GroupsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsMainView.swift; sourceTree = "<group>"; };
 		921EAF012C2C8AFE0032BA45 /* PlayerCardLeadingBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCardLeadingBackground.swift; sourceTree = "<group>"; };
 		921EAF022C2C8AFE0032BA45 /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		921EAF042C2C8AFE0032BA45 /* CachedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		921EAF362C2D53D60032BA45 /* ThirdPlaceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPlaceHeaderView.swift; sourceTree = "<group>"; };
 		921EAF382C2D54190032BA45 /* ThirdPlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPlaceListView.swift; sourceTree = "<group>"; };
 		921EAF3A2C2D547E0032BA45 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		921EAF3E2C2D58EB0032BA45 /* KnockoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnockoutViewModel.swift; sourceTree = "<group>"; };
 		92A99F772C0DD2A4005CA5C2 /* EURO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EURO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A99F7A2C0DD2A4005CA5C2 /* EUROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUROApp.swift; sourceTree = "<group>"; };
 		92A99F7C2C0DD2A4005CA5C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				921EAEDE2C2C6FEC0032BA45 /* KnockoutModel.swift */,
+				921EAF3E2C2D58EB0032BA45 /* KnockoutViewModel.swift */,
 				921EAEE02C2C6FEC0032BA45 /* KnockoutPOC.swift */,
 				921EAEE22C2C6FEC0032BA45 /* KnockoutPOC+Ext.swift */,
 				921EAEE62C2C6FEC0032BA45 /* MatchView.swift */,
@@ -169,7 +172,7 @@
 			children = (
 				921EAEF82C2C6FF00032BA45 /* GroupsModel.swift */,
 				921EAEF72C2C6FF00032BA45 /* GroupsViewModel.swift */,
-				921EAEFA2C2C6FF00032BA45 /* GroupsViewDemo.swift */,
+				921EAEFA2C2C6FF00032BA45 /* GroupsMainView.swift */,
 				921EAF302C2D51F30032BA45 /* GroupsHeaderView.swift */,
 				921EAF322C2D52A10032BA45 /* GroupsListView.swift */,
 				921EAF342C2D532A0032BA45 /* GroupsFooterView.swift */,
@@ -464,10 +467,11 @@
 				921EAF392C2D54190032BA45 /* ThirdPlaceListView.swift in Sources */,
 				921EAF222C2C8AFE0032BA45 /* ScoreSheetModel.swift in Sources */,
 				921EAF1E2C2C8AFE0032BA45 /* ClearModalModifier.swift in Sources */,
-				921EAEFB2C2C6FF00032BA45 /* GroupsViewDemo.swift in Sources */,
+				921EAEFB2C2C6FF00032BA45 /* GroupsMainView.swift in Sources */,
 				92A99F7D2C0DD2A4005CA5C2 /* ContentView.swift in Sources */,
 				921EAF202C2C8AFE0032BA45 /* RoundedButton.swift in Sources */,
 				92A99F7B2C0DD2A4005CA5C2 /* EUROApp.swift in Sources */,
+				921EAF3F2C2D58EB0032BA45 /* KnockoutViewModel.swift in Sources */,
 				921EAF352C2D532A0032BA45 /* GroupsFooterView.swift in Sources */,
 				921EAF242C2C8AFE0032BA45 /* CFSDKDouble+Ext.swift in Sources */,
 				921EAF1F2C2C8AFE0032BA45 /* FantasyTheme.swift in Sources */,
