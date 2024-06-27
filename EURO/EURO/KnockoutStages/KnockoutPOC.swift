@@ -72,27 +72,17 @@ struct MatchColumnView: View {
 import SwiftUI
 
 struct KnockoutPOC: View {
-    //@Binding var progress: Double
-    @ObservedObject var viewModel: GroupsViewModel
-    @State private var selectedTeams: [[Int: String]] = [[:], [:], [:], [:]]
     
-    @State private var rounds: [[Matches]] = [
-        Array(repeating: Matches(team1: Team(teamName: "", fullTeamName: "", teamFlag: ""),
-                                 team2: Team(teamName: "", fullTeamName: "", teamFlag: "")), count: 8),
-        Array(repeating: Matches(team1: Team(teamName: "", fullTeamName: "", teamFlag: ""),
-                                 team2: Team(teamName: "", fullTeamName: "", teamFlag: "")), count: 4),
-        Array(repeating: Matches(team1: Team(teamName: "", fullTeamName: "", teamFlag: ""),
-                                 team2: Team(teamName: "", fullTeamName: "", teamFlag: "")), count: 2),
-        Array(repeating: Matches(team1: Team(teamName: "", fullTeamName: "", teamFlag: ""),
-                                 team2: Team(teamName: "", fullTeamName: "", teamFlag: "")), count: 1)
-    ]
+    @ObservedObject var viewModel: GroupsViewModel
+    @StateObject var knockoutViewModel: KnockoutViewModel
+    
+    
     
     @State private var offset: CGFloat = .zero
     @State private var currentOffset: CGFloat = .zero
     @State private var additionalSpacing: Int = .zero
-    @State private var winnerLogo: String = ""
-    @State private var previouslySelectedTeamsCount: Int = .zero
-    let tournamentStages: [String] = ["Round of 16", "Round of 8", "Semi Final", "Final"]
+    
+    
    
     
     func spacing(elements: Int) -> CGFloat {
@@ -107,10 +97,6 @@ struct KnockoutPOC: View {
                     .ignoresSafeArea(.all,edges: .top)
                 SponsorView()
                     .padding(.top, 30)
-//                ProgressView(value: Double(viewModel.progressViewCounter), total: 35)
-//                    .accentColor(.yellow)
-//                    .progressViewStyle(.linear)
-//                    .padding([.horizontal, .top], 15)
                     
                 ProgressBar(progress: $viewModel.progressViewCounter)
             }
@@ -122,33 +108,33 @@ struct KnockoutPOC: View {
             GeometryReader { geo in
                 ScrollView(.vertical, showsIndicators: false) {
                     HStack(alignment: .center, spacing: .zero) {
-                        ForEach(0..<rounds.count, id: \.self) { roundIndex in
+                        ForEach(0..<knockoutViewModel.rounds.count, id: \.self) { roundIndex in
                             VStack(alignment: .center, spacing: .zero) {
                                 Spacer()
-                                Text(tournamentStages[roundIndex])
+                                Text(knockoutViewModel.tournamentStages[roundIndex])
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
 
                                 var selected: Binding<[Int:String]> {
                                     Binding {
-                                        selectedTeams[roundIndex]
+                                        knockoutViewModel.selectedTeams[roundIndex]
                                     } set: { value in
-                                        selectedTeams[roundIndex] = value
+                                        knockoutViewModel.selectedTeams[roundIndex] = value
                                     }
                                 }
                                 
                                 MatchColumnView(
-                                    elements: rounds[roundIndex].count,
-                                    rounds: rounds[roundIndex],
+                                    elements: knockoutViewModel.rounds[roundIndex].count,
+                                    rounds: knockoutViewModel.rounds[roundIndex],
                                     selectedTeams: selected,
                                     spacing: spacing,
                                     onTeamSelected: { matchIndex, team in
-                                        updateNextRound(roundIndex: roundIndex,
+                                        knockoutViewModel.updateNextRound(roundIndex: roundIndex,
                                                         matchIndex: matchIndex,
                                                         team: team)
                                     },
-                                    winnerLogo: $winnerLogo
+                                    winnerLogo: $knockoutViewModel.winnerLogo
                                 )
                             }
                         }
@@ -213,87 +199,14 @@ struct KnockoutPOC: View {
                 }
             }
         }
-        .onChange(of: selectedTeams) { value in
-            
-            let totalSelectedTeams = selectedTeams.flatMap{ $0 }.map{ !$0.value.isEmpty }.filter{ $0 }.count
-            if totalSelectedTeams > previouslySelectedTeamsCount {
-                viewModel.progressViewCounter += 1/43
-            } else {
-                if totalSelectedTeams == previouslySelectedTeamsCount { } else {
-                    viewModel.progressViewCounter -= 1/43
-                }
-            }
-            previouslySelectedTeamsCount = totalSelectedTeams
+        .onChange(of: knockoutViewModel.selectedTeams) { value in
+            knockoutViewModel.updateProgressForKnockout()
+           
         }
         .onAppear {
-            populateFirstRound()
+            knockoutViewModel.populateFirstRound()
         }
-    }
-    
-    
-    
-    private func populateFirstRound() {
-        let selectedTeams = viewModel.predictorNew.filter { $0.isChecked }
-        guard selectedTeams.count == 4 else {
-            print("There must be exactly 4 selected teams")
-            return
-        }
-
-        let selectedThirdPlacedTeams = viewModel.selectedThirdPlacedTeams
-        rounds[0] = [
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[0].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[0].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[5].teamName,
-                                teamFlag: viewModel.secondPlaceTeams[5].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[1].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[1].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[4].teamName,
-                                teamFlag: viewModel.secondPlaceTeams[4].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[2].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[2].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[3].teamName,
-                                teamFlag: viewModel.secondPlaceTeams[3].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[3].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[3].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[2].teamName,
-                                teamFlag: viewModel.secondPlaceTeams[2].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[4].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[4].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[1].teamName,
-                                teamFlag: viewModel.secondPlaceTeams[1].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: viewModel.firstPlaceTeams[5].teamName,
-                                teamFlag: viewModel.firstPlaceTeams[5].flag),
-                    team2: Team(teamName: "", fullTeamName: viewModel.secondPlaceTeams[0].teamName,
-                                teamFlag: viewModel.secondPlaceTeams[0].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: selectedTeams[0].teamName,
-                                teamFlag: selectedTeams[0].flag),
-                    team2: Team(teamName: "", fullTeamName: selectedTeams[1].teamName,
-                                teamFlag: selectedTeams[1].flag)),
-            Matches(team1: Team(teamName: "", fullTeamName: selectedTeams[2].teamName,
-                                teamFlag: selectedTeams[2].flag),
-                    team2: Team(teamName: "", fullTeamName: selectedTeams[3].teamName,
-                                teamFlag: selectedTeams[3].flag))
-        ]
-    }
-    
-    private func updateNextRound(roundIndex: Int, matchIndex: Int, team: String) {
-            guard roundIndex < rounds.count - 1 else {
-                if roundIndex == rounds.count - 1 {
-                    winnerLogo = team
-                }
-                return
-            }
-            
-            let nextRoundMatchIndex = matchIndex / 2
-            
-            if matchIndex % 2 == 0 {
-                rounds[roundIndex + 1][nextRoundMatchIndex].team1 = Team(teamName: "", fullTeamName: team,
-                                                                         teamFlag: team)
-            } else {
-                rounds[roundIndex + 1][nextRoundMatchIndex].team2 = Team(teamName: "", fullTeamName: team,
-                                                                         teamFlag: team)
-            }
-        }
+    } 
 }
 
 

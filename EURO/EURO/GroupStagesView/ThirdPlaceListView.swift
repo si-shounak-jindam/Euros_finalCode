@@ -105,7 +105,8 @@ struct ThirdPlaceListView: View {
             .CFSDKcornerRadius(20, corners: [.topLeft, .topRight])
         }
         .fullScreenCover(isPresented: $viewModel.showKnockoutBracket, content: {
-            KnockoutPOC(viewModel: viewModel)
+            KnockoutPOC(viewModel: viewModel,
+                        knockoutViewModel: KnockoutViewModel(viewModel: viewModel))
         })
         .edgesIgnoringSafeArea(.bottom)
     }
