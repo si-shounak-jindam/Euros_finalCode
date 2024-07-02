@@ -15,7 +15,6 @@ struct GroupsMainView: View {
         VStack(spacing:0){
             
             NavigationBar(viewModel: viewModel)
-                .frame(height: 80)
                 .ignoresSafeArea(.all,edges: .top)
                 .onAppear {
                     viewModel.updateNavigationGroupTitle("Group Stages")
@@ -41,6 +40,7 @@ struct GroupsMainView: View {
                 }
                 .padding(.vertical,20)
             }
+            .padding(.all, UIDevice.current.userInterfaceIdiom == .pad ? 30 : 0)
             .background(Color.scrollBg)
             .ignoresSafeArea(.all,edges: .vertical)
         }

@@ -25,14 +25,15 @@ struct GroupsListView: View {
                         
                         Image(teams[teamIndex].teamFlag)
                             .resizable()
-                            .frame(width: 35, height: 35)
+                            .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35,
+                                   height: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35)
                             .background(Color.gray.opacity(0.5))
-                            .cornerRadius(25)
                             .overlay(
-                                teams[teamIndex].teamFlag != "" ? RoundedRectangle(cornerRadius: 25)
+                                teams[teamIndex].teamFlag != "" ? Circle()
                                     .stroke(Color.white, lineWidth: 2) : nil
                             )
                             .padding(.vertical,2.5)
+                            .clipShape(.circle)
                         
                         Text(teams[teamIndex].fullTeamName)
                             .foregroundColor(Color.white)
@@ -46,7 +47,7 @@ struct GroupsListView: View {
             }
             
         }
-        .frame(height: 263)
+        .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 360 : 263)
         .environment(\.editMode, .constant(.active))
         .listStyle(.plain)
         

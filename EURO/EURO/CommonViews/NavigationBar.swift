@@ -29,5 +29,6 @@ struct NavigationBar: View {
             .padding(.top, 80)
             .padding(.leading, 20)
         }
+        .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 140 : 80)
     }
 }

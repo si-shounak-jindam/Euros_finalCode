@@ -46,10 +46,11 @@ struct GroupsHeaderView: View {
                                 VStack{
                                     Image(teams[i].teamFlag)
                                         .resizable()
-                                        .frame(width: 35, height: 35)
-                                        .cornerRadius(25)
+                                        .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35,
+                                               height: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35)
+                                        .clipShape(Circle())
                                         .overlay(
-                                            RoundedRectangle(cornerRadius: 25)
+                                            Circle()
                                                 .stroke(Color.white, lineWidth: 2)
                                         )
                                     
@@ -62,7 +63,8 @@ struct GroupsHeaderView: View {
                                 VStack{
                                     Circle()
                                         .foregroundColor(Color.gray.opacity(0.7))
-                                        .frame(width: 35, height: 35)
+                                        .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35,
+                                               height: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35)
                                     Text(" ")
                                         .foregroundColor(.white)
                                 }

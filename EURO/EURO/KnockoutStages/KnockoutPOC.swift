@@ -93,17 +93,17 @@ struct KnockoutPOC: View {
         VStack(alignment: .center, spacing: .zero) {
             VStack(spacing: .zero) {
                 NavigationBar(viewModel: viewModel)
-                    .frame(height: 80)
                     .ignoresSafeArea(.all,edges: .top)
-                SponsorView()
-                    .padding(.top, 30)
-                    
-                ProgressBar(progress: $viewModel.progressViewCounter)
             }
-            .background(Color.scrollBg)
             .onAppear {
                 viewModel.updateNavigationGroupTitle("My Bracket")
             }
+            
+            VStack {
+                SponsorView()
+                ProgressBar(progress: $viewModel.progressViewCounter)
+            }
+            .background(Color.scrollBg)
             
             GeometryReader { geo in
                 ScrollView(.vertical, showsIndicators: false) {
@@ -199,6 +199,8 @@ struct KnockoutPOC: View {
                 }
             }
         }
+        .background(Color.scrollBg)
+        .ignoresSafeArea(.all,edges: .vertical)
         .onChange(of: knockoutViewModel.selectedTeams) { value in
             knockoutViewModel.updateProgressForKnockout()
            
@@ -206,7 +208,7 @@ struct KnockoutPOC: View {
         .onAppear {
             knockoutViewModel.populateFirstRound()
         }
-    } 
+    }
 }
 
 

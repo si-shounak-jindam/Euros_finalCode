@@ -10,13 +10,14 @@ import SwiftUI
 struct ThirdPlaceListView: View {
     @ObservedObject var viewModel: GroupsViewModel
     var rowHeight: CGFloat? = 55
+    var rowHeightIpad: CGFloat? = 100
     
     var body: some View {
         let items = viewModel.predictorNew
         let maxSelectionsReached = viewModel.checkedItemsCount >= 4
         VStack(spacing: 0) {
             ForEach(items.indices, id: \.self) { i in
-                VStack(spacing: 0) {
+                VStack(spacing: 10) {
                     HStack(spacing: 15) {
                         Toggle(isOn: $viewModel.predictorNew[i].isChecked) {
                         }
@@ -29,21 +30,21 @@ struct ThirdPlaceListView: View {
                             RoundedRectangle(cornerRadius: 25)
                                 .stroke(Color.white.opacity(0.7), lineWidth: 0.7)
                         )
-                        .frame(width: 30)
+                        .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 30)
                         .toggleStyle(CheckboxToggleStyle())
                         .disabled(items[i].flag == "" || (maxSelectionsReached && !items[i].isChecked))
                         
                         HStack(spacing: 15) {
                             Image("\(items[i].flag)")
                                 .resizable()
-                                .frame(width: 30, height: 30)
-                                .cornerRadius(25)
-                                .background(items[i].flag == "" ? Color.gray.opacity(0.5) : Color.clear)
-                                .cornerRadius(25)
+                                .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35,
+                                       height: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 35)
+                                .background(Color.gray.opacity(0.5))
                                 .overlay(
-                                    items[i].flag != "" ? RoundedRectangle(cornerRadius: 25)
+                                    items[i].flag != "" ? Circle()
                                         .stroke(Color.white, lineWidth: 2) : nil
                                 )
+                                .clipShape(.circle)
                             
                             Text("\(items[i].teamName)").foregroundColor(.white)
                             Spacer()
@@ -53,10 +54,12 @@ struct ThirdPlaceListView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 12)
                     if items[i].name != "F" {
-                        Divider().frame(height: 0.5).background(Color.gray).opacity(0.3)
+                        Divider()
+                            .frame(height: 0.5)
+                            .background(Color.gray).opacity(0.3)
                     }
                 }
-                .frame(height: rowHeight)
+                .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? rowHeightIpad : rowHeight)
                 .background(viewModel.predictorNew[i].isChecked ? Color(hex: 0x101d6b) : Color(hex: 0x101d6b).opacity(0.4))
             }
         }
