@@ -93,6 +93,7 @@ struct KnockoutPOC: View {
         VStack(alignment: .center, spacing: .zero) {
             VStack(spacing: .zero) {
                 NavigationBar(viewModel: viewModel)
+                    .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 160 : 80)
                     .ignoresSafeArea(.all,edges: .top)
             }
             .onAppear {
@@ -200,7 +201,7 @@ struct KnockoutPOC: View {
             }
         }
         .background(Color.scrollBg)
-        .ignoresSafeArea(.all,edges: .vertical)
+        .edgesIgnoringSafeArea(.all)
         .onChange(of: knockoutViewModel.selectedTeams) { value in
             knockoutViewModel.updateProgressForKnockout()
            

@@ -15,6 +15,7 @@ struct GroupsMainView: View {
         VStack(spacing:0){
             
             NavigationBar(viewModel: viewModel)
+                .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 160 : 80)
                 .ignoresSafeArea(.all,edges: .top)
                 .onAppear {
                     viewModel.updateNavigationGroupTitle("Group Stages")
