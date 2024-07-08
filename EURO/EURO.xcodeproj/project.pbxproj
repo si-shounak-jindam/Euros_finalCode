@@ -55,6 +55,18 @@
 		92A99F982C0DD2A6005CA5C2 /* EUROUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A99F972C0DD2A6005CA5C2 /* EUROUITestsLaunchTests.swift */; };
 		92A99FA52C0DD426005CA5C2 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A99FA42C0DD426005CA5C2 /* Colours.xcassets */; };
 		92A99FBD2C0EFD03005CA5C2 /* GameStarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A99FBC2C0EFD03005CA5C2 /* GameStarterView.swift */; };
+		92CBCDC12C353F3600B94DAD /* BaseURLType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDB42C353F3600B94DAD /* BaseURLType.swift */; };
+		92CBCDC22C353F3600B94DAD /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDB52C353F3600B94DAD /* HTTPMethodType.swift */; };
+		92CBCDC32C353F3600B94DAD /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDB62C353F3600B94DAD /* NetworkServiceProvider.swift */; };
+		92CBCDC42C353F3600B94DAD /* PathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDB72C353F3600B94DAD /* PathType.swift */; };
+		92CBCDC52C353F3600B94DAD /* ExtendedURNs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDB92C353F3600B94DAD /* ExtendedURNs.swift */; };
+		92CBCDC62C353F3600B94DAD /* URN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDBA2C353F3600B94DAD /* URN.swift */; };
+		92CBCDC72C353F3600B94DAD /* BusterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDBC2C353F3600B94DAD /* BusterHelper.swift */; };
+		92CBCDC82C353F3600B94DAD /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDBD2C353F3600B94DAD /* ServiceConstants.swift */; };
+		92CBCDC92C353F3600B94DAD /* ServiceHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDBE2C353F3600B94DAD /* ServiceHeaderType.swift */; };
+		92CBCDCA2C353F3600B94DAD /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDBF2C353F3600B94DAD /* ServiceManager.swift */; };
+		92CBCDD02C355E3300B94DAD /* EmployeeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDCF2C355E3300B94DAD /* EmployeeDataModel.swift */; };
+		92CBCDD62C3BCB2400B94DAD /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDD52C3BCB2400B94DAD /* CreateUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +138,18 @@
 		92A99F972C0DD2A6005CA5C2 /* EUROUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUROUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92A99FA42C0DD426005CA5C2 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		92A99FBC2C0EFD03005CA5C2 /* GameStarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStarterView.swift; sourceTree = "<group>"; };
+		92CBCDB42C353F3600B94DAD /* BaseURLType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseURLType.swift; sourceTree = "<group>"; };
+		92CBCDB52C353F3600B94DAD /* HTTPMethodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
+		92CBCDB62C353F3600B94DAD /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		92CBCDB72C353F3600B94DAD /* PathType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathType.swift; sourceTree = "<group>"; };
+		92CBCDB92C353F3600B94DAD /* ExtendedURNs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedURNs.swift; sourceTree = "<group>"; };
+		92CBCDBA2C353F3600B94DAD /* URN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URN.swift; sourceTree = "<group>"; };
+		92CBCDBC2C353F3600B94DAD /* BusterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusterHelper.swift; sourceTree = "<group>"; };
+		92CBCDBD2C353F3600B94DAD /* ServiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
+		92CBCDBE2C353F3600B94DAD /* ServiceHeaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHeaderType.swift; sourceTree = "<group>"; };
+		92CBCDBF2C353F3600B94DAD /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		92CBCDCF2C355E3300B94DAD /* EmployeeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataModel.swift; sourceTree = "<group>"; };
+		92CBCDD52C3BCB2400B94DAD /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +249,8 @@
 				921EAF112C2C8AFE0032BA45 /* CFSDKString+Ext.swift */,
 				921EAF122C2C8AFE0032BA45 /* Date+Ext.swift */,
 				921EAF132C2C8AFE0032BA45 /* Encodable+Ext.swift */,
+				92CBCDCF2C355E3300B94DAD /* EmployeeDataModel.swift */,
+				92CBCDD52C3BCB2400B94DAD /* CreateUserModel.swift */,
 				921EAF142C2C8AFE0032BA45 /* Task+Ext.swift */,
 				921EAF152C2C8AFE0032BA45 /* URLRequest+Ext.swift */,
 				921EAF162C2C8AFE0032BA45 /* View+Extension.swift */,
@@ -270,6 +296,7 @@
 				92A99F7E2C0DD2A5005CA5C2 /* Assets.xcassets */,
 				92A99FA42C0DD426005CA5C2 /* Colours.xcassets */,
 				92A99FBC2C0EFD03005CA5C2 /* GameStarterView.swift */,
+				92CBCDC02C353F3600B94DAD /* Service Manager */,
 				921EAEF62C2C6FF00032BA45 /* GroupStagesView */,
 				921EAF2F2C2D51440032BA45 /* CommonViews */,
 				921EAEDD2C2C6FEC0032BA45 /* KnockoutStages */,
@@ -304,6 +331,39 @@
 				92A99F972C0DD2A6005CA5C2 /* EUROUITestsLaunchTests.swift */,
 			);
 			path = EUROUITests;
+			sourceTree = "<group>";
+		};
+		92CBCDB82C353F3600B94DAD /* NetworkUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				92CBCDB52C353F3600B94DAD /* HTTPMethodType.swift */,
+				92CBCDB72C353F3600B94DAD /* PathType.swift */,
+				92CBCDB42C353F3600B94DAD /* BaseURLType.swift */,
+				92CBCDB62C353F3600B94DAD /* NetworkServiceProvider.swift */,
+			);
+			path = NetworkUtilities;
+			sourceTree = "<group>";
+		};
+		92CBCDBB2C353F3600B94DAD /* URN */ = {
+			isa = PBXGroup;
+			children = (
+				92CBCDB82C353F3600B94DAD /* NetworkUtilities */,
+				92CBCDBA2C353F3600B94DAD /* URN.swift */,
+				92CBCDB92C353F3600B94DAD /* ExtendedURNs.swift */,
+			);
+			path = URN;
+			sourceTree = "<group>";
+		};
+		92CBCDC02C353F3600B94DAD /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				92CBCDBB2C353F3600B94DAD /* URN */,
+				92CBCDBF2C353F3600B94DAD /* ServiceManager.swift */,
+				92CBCDBC2C353F3600B94DAD /* BusterHelper.swift */,
+				92CBCDBD2C353F3600B94DAD /* ServiceConstants.swift */,
+				92CBCDBE2C353F3600B94DAD /* ServiceHeaderType.swift */,
+			);
+			path = "Service Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,9 +499,12 @@
 			files = (
 				921EAEF52C2C6FED0032BA45 /* KnockoutModel.swift in Sources */,
 				921EAF1C2C2C8AFE0032BA45 /* CFSDKCustomFonts.swift in Sources */,
+				92CBCDC42C353F3600B94DAD /* PathType.swift in Sources */,
 				921EAF262C2C8AFE0032BA45 /* Date+Ext.swift in Sources */,
 				921EAF292C2C8AFE0032BA45 /* URLRequest+Ext.swift in Sources */,
 				921EAEEF2C2C6FED0032BA45 /* ScrollOffsetPreferenceKey.swift in Sources */,
+				92CBCDC32C353F3600B94DAD /* NetworkServiceProvider.swift in Sources */,
+				92CBCDC92C353F3600B94DAD /* ServiceHeaderType.swift in Sources */,
 				921EAEEE2C2C6FED0032BA45 /* KnockoutPOC.swift in Sources */,
 				921EAF1D2C2C8AFE0032BA45 /* CFSDKImageName.swift in Sources */,
 				921EAEF02C2C6FED0032BA45 /* ProgressBar.swift in Sources */,
@@ -451,6 +514,7 @@
 				921EAF252C2C8AFE0032BA45 /* CFSDKString+Ext.swift in Sources */,
 				921EAF2A2C2C8AFE0032BA45 /* View+Extension.swift in Sources */,
 				921EAF372C2D53D60032BA45 /* ThirdPlaceHeaderView.swift in Sources */,
+				92CBCDC12C353F3600B94DAD /* BaseURLType.swift in Sources */,
 				921EAF332C2D52A10032BA45 /* GroupsListView.swift in Sources */,
 				921EAF1A2C2C8AFE0032BA45 /* CachedImageView.swift in Sources */,
 				921EAF282C2C8AFE0032BA45 /* Task+Ext.swift in Sources */,
@@ -458,12 +522,16 @@
 				921EAEF12C2C6FED0032BA45 /* MatchView.swift in Sources */,
 				921EAEED2C2C6FED0032BA45 /* KnockoutPOC+Ext.swift in Sources */,
 				921EAEFD2C2C6FF00032BA45 /* GroupsModel.swift in Sources */,
+				92CBCDC52C353F3600B94DAD /* ExtendedURNs.swift in Sources */,
+				92CBCDC22C353F3600B94DAD /* HTTPMethodType.swift in Sources */,
+				92CBCDD02C355E3300B94DAD /* EmployeeDataModel.swift in Sources */,
 				921EAEFC2C2C6FF00032BA45 /* SponsorView.swift in Sources */,
 				921EAF182C2C8AFE0032BA45 /* PlayerCardLeadingBackground.swift in Sources */,
 				921EAD512C2C54520032BA45 /* ColorExt.swift in Sources */,
 				921EAF192C2C8AFE0032BA45 /* RoundedCorner.swift in Sources */,
 				921EAF1B2C2C8AFE0032BA45 /* CFSDKColorName.swift in Sources */,
 				921EAF2E2C2C8E5C0032BA45 /* NavigationBar.swift in Sources */,
+				92CBCDC72C353F3600B94DAD /* BusterHelper.swift in Sources */,
 				921EAF392C2D54190032BA45 /* ThirdPlaceListView.swift in Sources */,
 				921EAF222C2C8AFE0032BA45 /* ScoreSheetModel.swift in Sources */,
 				921EAF1E2C2C8AFE0032BA45 /* ClearModalModifier.swift in Sources */,
@@ -473,7 +541,11 @@
 				92A99F7B2C0DD2A4005CA5C2 /* EUROApp.swift in Sources */,
 				921EAF3F2C2D58EB0032BA45 /* KnockoutViewModel.swift in Sources */,
 				921EAF352C2D532A0032BA45 /* GroupsFooterView.swift in Sources */,
+				92CBCDCA2C353F3600B94DAD /* ServiceManager.swift in Sources */,
+				92CBCDC62C353F3600B94DAD /* URN.swift in Sources */,
+				92CBCDC82C353F3600B94DAD /* ServiceConstants.swift in Sources */,
 				921EAF242C2C8AFE0032BA45 /* CFSDKDouble+Ext.swift in Sources */,
+				92CBCDD62C3BCB2400B94DAD /* CreateUserModel.swift in Sources */,
 				921EAF1F2C2C8AFE0032BA45 /* FantasyTheme.swift in Sources */,
 				921EAF232C2C8AFE0032BA45 /* ScoreSheetViewModel.swift in Sources */,
 				921EAF312C2D51F30032BA45 /* GroupsHeaderView.swift in Sources */,

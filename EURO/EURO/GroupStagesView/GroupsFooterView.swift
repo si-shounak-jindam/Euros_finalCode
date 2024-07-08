@@ -11,6 +11,9 @@ struct GroupsFooterView: View {
     var index: Int
     @ObservedObject var viewModel: GroupsViewModel
     @StateObject var scoreSheetViewModel: ScoreSheetViewModel
+    @State private var employee = Employee(name: "John Doe", salary: "1234", age: "30")
+    @State private var responseMessage = ""
+    @State private var showAlert = false
     
     var body: some View {
         let groupKey = viewModel.groupTeamsDictNew[index].name
@@ -82,7 +85,11 @@ struct GroupsFooterView: View {
                     Divider()
                     HStack {
                         Button(action: {
-                            scoreSheetViewModel.showScoreSheet.toggle()
+                            
+                            Task {
+                                await viewModel.validateUser(name: "test123", salary: "23000", age: "23")
+                            }
+                                scoreSheetViewModel.showScoreSheet.toggle()
                         }, label: {
                             Text("See how to score points")
                                 .foregroundColor(.cfsdkAccent1)

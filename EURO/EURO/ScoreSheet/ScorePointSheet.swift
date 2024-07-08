@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScorePointSheet: View {
     @StateObject private var scoreSheetViewModel = ScoreSheetViewModel()
+    @ObservedObject private var viewModel = GroupsViewModel()
     
     
     var body: some View {
@@ -35,20 +36,20 @@ struct ScorePointSheet: View {
                     .background (
                         Color.white.opacity(0.5)
                     )
-                ForEach(scoreSheetViewModel.scoreSheetDetail.indices, id: \.self) { index in
+                ForEach(viewModel.dummyData?.data ?? [], id: \.id) { data in
                     HStack {
-                        Text(scoreSheetViewModel.scoreSheetDetail[index].name)
+                        Text(data.employeeName ?? "")
                             .font(.title3.bold())
                             .foregroundColor(.cfsdkWhite)
                             .padding([.top, .leading], 10)
                         Spacer()
-                        Text(scoreSheetViewModel.scoreSheetDetail[index].points)
-                            .font(.title3.bold())
-                            .foregroundColor(scoreSheetViewModel.scoreSheetDetail[index].points == "0 pts" ? .cfsdkAccentError: .cfsdkWhite)
-                            .padding([.top, .trailing], 10)
+//                        Text(scoreSheetViewModel.scoreSheetDetail[index].points)
+//                            .font(.title3.bold())
+//                            .foregroundColor(scoreSheetViewModel.scoreSheetDetail[index].points == "0 pts" ? .cfsdkAccentError: .cfsdkWhite)
+//                            .padding([.top, .trailing], 10)
                     }
                     HStack{
-                        Text(scoreSheetViewModel.scoreSheetDetail[index].description)
+                        Text(data.employeeName ?? "")
                             .font(.subheadline)
                             .foregroundColor(.cfsdkWhite).opacity(0.7)
                             .lineLimit(nil)
@@ -77,6 +78,11 @@ struct ScorePointSheet: View {
             .CFSDKcornerRadius(20, corners: [.topLeft, .topRight])
             
             
+        }
+        .onAppear {
+            Task {
+                await viewModel.fetchData()
+            }
         }
         .edgesIgnoringSafeArea(.bottom)
     }

@@ -7,8 +7,38 @@
 
 import Foundation
 import SwiftUI
+
 class GroupsViewModel: ObservableObject{
     
+    
+    @Published var dummyData : EmployeeDataModel? = nil
+    
+    let apiService = ServiceManager()
+    
+    @MainActor
+    func fetchData() async {
+        do {
+            dummyData = try await apiService.execute(with: EmployeeURN())
+        }
+        catch {
+            print("error")
+        }
+    }
+    
+    func validateUser(name: String, salary: String, age: String) async {
+        let requestModel = CreateUserModel(name: name, salary: salary, age: age)
+        do {
+            let requestData = try requestModel.encodeJSON()
+            let validateUser = EmployeePostURN(body: requestData)
+            let validateUserData = try await apiService.execute(with: validateUser)
+            print("////////" ,validateUserData)
+        } catch {
+//            if let serviceError = error as? ServiceErrors {
+                print(error)
+         //   }
+        }
+    }
+  
     @Published var groupTeamsDictNew : [Group]
     @Published var newTeamsDictNew: [Group]
     @Published var predictorNew : [Predictor]

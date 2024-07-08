@@ -41,6 +41,11 @@ struct GroupsMainView: View {
                 }
                 .padding(.vertical,20)
             }
+            .onAppear {
+                Task {
+                    await viewModel.fetchData()
+                }
+            }
             .padding(.all, UIDevice.current.userInterfaceIdiom == .pad ? 30 : 0)
             .background(Color.scrollBg)
             .ignoresSafeArea(.all,edges: .vertical)
